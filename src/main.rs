@@ -3,7 +3,9 @@ use tokio::net::TcpListener;
 
 #[tokio::main]
 async fn main() -> io::Result<()> {
-    let listener = TcpListener::bind("127.0.0.1:6142").await.unwrap();
+    let listener = TcpListener::bind("0.0.0.0:6142").await.unwrap();
+
+    println!("Listening on 0.0.0.0:6142");
 
     loop {
         let (mut socket, _) = listener.accept().await?;
