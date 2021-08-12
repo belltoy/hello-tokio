@@ -1,0 +1,13 @@
+[package]
+name = "hello"
+version = "0.1.0"
+authors = ["belltoy <belltoy@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+futures = "=0.1.25"
+tokio = { version = "1", features = ["full"] }
+tokio-timer = "0.2"
+reqwest = "0.9"
+tokio-signal = "0.2"
+nix = "0.9"
